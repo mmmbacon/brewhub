@@ -28,7 +28,7 @@ function App() {
 
   const getBreweries = async () => {
     try {
-      const { data } = await axios.get(`${process.env.NODE_ENV === 'development' ? 'http://localhost:5000' : ''}/breweries/all`);
+      const { data } = await axios.get(`${process.env.NODE_ENV === 'development' ? 'http://localhost:5000' : 'https://brewhub-api.herokuapp.com/'}/breweries/all`);
       dispatch({ type: 'GET_ALL_BREWERIES', payload: data });
     } catch (error) {
       throw new Error(error);
