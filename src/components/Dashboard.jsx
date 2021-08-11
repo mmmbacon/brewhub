@@ -1,13 +1,13 @@
 import React, { useContext } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-
 import {
   AppBar,
   Toolbar,
   Typography,
   Box,
+  Link,
 } from '@material-ui/core';
-
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import Context from '../context';
 
@@ -54,12 +54,16 @@ const Dashboard = () => {
   const classes = useStyles();
   const { state } = useContext(Context);
   const { breweries } = state;
+  const mobileSize = useMediaQuery('(min-width:650px)');
 
   return (
     <div>
       <AppBar position="static" elevation={0}>
         <Toolbar className={classes.toolbar}>
-          <div
+          <Link
+            color="secondary"
+            href="https://github.com/mmmbacon"
+            target="empty"
             className={classes.socialPanel}
             style={{
               display: 'flex',
@@ -67,8 +71,11 @@ const Dashboard = () => {
             }}
           >
             <GitHubIcon color="secondary" />
-            <Typography variant="body1" className={classes.socialText}>mmmbacon</Typography>
-          </div>
+            {
+              mobileSize
+                ? <Typography variant="body1" className={classes.socialText}>mmmbacon</Typography> : null
+            }
+          </Link>
           <Box style={{ transform: 'rotate(-3deg)', marginTop: '15px' }}>
             <Typography display="inline" variant="h2" className={classes.title}>
               Brewhub
