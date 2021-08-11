@@ -2,6 +2,9 @@
 
 A web app for finding Canadian breweries in your province using the [brewhub api](https://github.com/mmmbacon/brewhub-api). In order to run this application locally in development mode you must also have the above mentioned API server installed and running.
 
+## Deployment:
+[https://brewhub.vercel.app/](https://brewhub.vercel.app/)
+
 ## Prerequisites:
 
  * Node.js ^10.16
