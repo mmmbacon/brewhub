@@ -8,6 +8,7 @@ import {
   Box,
 } from '@material-ui/core';
 
+import GitHubIcon from '@material-ui/icons/GitHub';
 import Context from '../context';
 
 // Custom Components
@@ -38,6 +39,15 @@ const useStyles = makeStyles((theme) => ({
     top: '-20px',
     left: '80px',
   },
+  socialPanel: {
+    position: 'absolute',
+    top: '5px',
+    left: '5px',
+  },
+  socialText: {
+    fontWeight: 600,
+    paddingLeft: 5,
+  },
 }));
 
 const Dashboard = () => {
@@ -49,6 +59,16 @@ const Dashboard = () => {
     <div>
       <AppBar position="static" elevation={0}>
         <Toolbar className={classes.toolbar}>
+          <div
+            className={classes.socialPanel}
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+            }}
+          >
+            <GitHubIcon color="secondary" />
+            <Typography variant="body1" className={classes.socialText}>mmmbacon</Typography>
+          </div>
           <Box style={{ transform: 'rotate(-3deg)', marginTop: '15px' }}>
             <Typography display="inline" variant="h2" className={classes.title}>
               Brewhub

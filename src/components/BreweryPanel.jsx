@@ -67,7 +67,9 @@ const BreweryPanel = (props) => {
               {' '}
               {established}
             </Typography>
-            <Box mt={3}>
+          </Box>
+          <Box px={3}>
+            <Box>
               <Box display="flex" alignContent="center">
                 <Box display="flex" alignItems="center" justifyContent="center">
                   <HomeIcon className={classes.icon} />
@@ -87,7 +89,6 @@ const BreweryPanel = (props) => {
                   </Typography>
                 </Box>
               </Box>
-
             </Box>
             <Box mt={1}>
               <div style={{
