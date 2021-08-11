@@ -28,3 +28,11 @@ Run the app:
 
 `$ npm start`
 
+
+Screenshots:
+
+![image](https://user-images.githubusercontent.com/8649801/129053640-47d60452-d080-4489-8452-f483edfd5b13.png)
+
+![image](https://user-images.githubusercontent.com/8649801/129053739-dfee71fa-8e27-4ea9-ae59-5974af3f94b6.png)
+
+
