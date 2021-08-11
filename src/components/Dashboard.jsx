@@ -21,15 +21,22 @@ const useStyles = makeStyles((theme) => ({
     marginRight: theme.spacing(2),
   },
   title: {
-    marginLeft: 20,
+    marginLeft: 0,
     flexGrow: 1,
     fontFamily: 'Oleo Script Swash Caps',
+    transform: 'rotate(-20deg)',
   },
   toolbar: {
-    height: '100px',
+    height: '120px',
+    justifyContent: 'center',
   },
   subtitle: {
     fontWeight: 600,
+  },
+  subtitleContainer: {
+    position: 'relative',
+    top: '-20px',
+    left: '80px',
   },
 }));
 
@@ -42,18 +49,21 @@ const Dashboard = () => {
     <div>
       <AppBar position="static" elevation={0}>
         <Toolbar className={classes.toolbar}>
-          <Box>
+          <Box style={{ transform: 'rotate(-3deg)', marginTop: '15px' }}>
             <Typography display="inline" variant="h2" className={classes.title}>
               Brewhub
             </Typography>
-            <Typography noWrap display="inline" variant="body1" className={classes.subtitle}>
-              {' '}
-              Find
-              {' '}
-              <em>your</em>
-              {' '}
-              brewery
-            </Typography>
+            <div className={classes.subtitleContainer}>
+              <Typography noWrap display="inline" variant="body1" className={classes.subtitle}>
+
+                {' '}
+                Find
+                {' '}
+                <em>your</em>
+                {' '}
+                brewery
+              </Typography>
+            </div>
           </Box>
         </Toolbar>
       </AppBar>
